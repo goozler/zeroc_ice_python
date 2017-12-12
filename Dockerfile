@@ -2,6 +2,14 @@ FROM python:3.6.3-alpine3.6
 
 ARG ICE_VERSION=3.7.0.1
 
+LABEL maintainer="Krutov Alexander <goozler@mail.ru>" \
+      org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.vcs-url="https://github.com/goozler/zeroc_ice_python.git" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.schema-version="1.0.0-rc.1" \
+      org.label-schema.description="An Alpine image with precompiled ZeroC ICE \
+framework Python package"
+
 RUN set -ex \
   && apk add --no-cache \
     libstdc++ \
