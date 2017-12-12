@@ -1,6 +1,8 @@
 FROM python:3.6.3-alpine3.6
 
 ARG ICE_VERSION=3.7.0.1
+ARG BUILD_DATE
+ARG VCS_REF
 
 LABEL maintainer="Krutov Alexander <goozler@mail.ru>" \
       org.label-schema.build-date=$BUILD_DATE \
